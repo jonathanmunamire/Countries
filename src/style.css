@@ -1,7 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
 body {
-    background-color: bisque;
+    font-family: 'Poppins', sans-serif;
 }
 
-.hello {
-    color: red;
-  }
+.main_title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.components {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form_section {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+
+.input {
+    height: 2rem;
+}
+
+.search_button {
+    height: 1.5rem;
+}
+
+.country_card {
+    box-shadow: 1px 1px 10px;
+    width: 30vw;
+}
+
+.country_image {
+    width: 100%;
+}
+
+.country_data {
+    padding: 5% 10% 5% 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.country_name{
+    font-size: 2rem;
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+
+.country_region {
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+.country_data p {
+    margin: 0;
+    margin-bottom: 2%;
+}
