@@ -17,6 +17,8 @@ search.addEventListener('click', ()=>{
   }
 })
 
+console.log(countryName);
+
 const request = new XMLHttpRequest();
 request.open('GET', `https://restcountries.com/v2/name/${countryName}`);
 request.send();
