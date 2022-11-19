@@ -10,6 +10,10 @@ const message = document.querySelector(".message");
 search.addEventListener('click', ()=>{
   if ( countryInput.value == '' ) {
     message.innerHTML = `Add Country`
+    message.classList.remove('hide')
+    setTimeout(() =>{
+      message.classList.add('hide');
+    },2000)
   }else {
     getCountry(countryInput.value);
     countryInput.value = '';
@@ -42,7 +46,7 @@ const getCountry = (input) =>{
     <h3 class="country_region">${data.region}</h3>
     <p>
       🕔
-      <span> Time-Zone : </span> ${data.timezones[0]}
+      <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
     </p>
     <p>
       🏢
@@ -58,7 +62,7 @@ const getCountry = (input) =>{
     </p>
     <p>
       🧑🏻‍🤝‍🧑🏾
-      <span> Population : </span> ${data.population}
+      <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M
     </p>
     <p>
       📏
@@ -66,7 +70,7 @@ const getCountry = (input) =>{
     </p>
     <p>
       🚧
-      <span> Borders : </span> ${[data.borders]}
+      <span> Borders : </span> ${[data.borders.join(", ")]}
     </p>
     <p>
       💵

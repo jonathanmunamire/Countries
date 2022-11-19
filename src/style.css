@@ -28,7 +28,7 @@ body {
     color: #fff;
 }
 
-.country_input {
+.input {
     height: 2.5rem;
     margin-bottom: 1.5rem;
     font-family: 'Poppins', sans-serif;
@@ -40,7 +40,7 @@ body {
     color: #02a58f;
 }
 
-.country_input::-webkit-input-placeholder {
+.input::-webkit-input-placeholder {
     color: #02a58f;
 }
 
