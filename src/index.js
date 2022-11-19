@@ -5,21 +5,22 @@ const search = document.querySelector(".search_button");
 const countryInput = document.querySelector(".country_input");
 const message = document.querySelector(".message");
 
-let countryName = "portugal";
-let url = `https://restcountries.com/v2/name/${countryName}`
+
 
 search.addEventListener('click', ()=>{
-  const abcd = countryInput.value
-  if ( abcd == '') {
+  if ( countryInput.value == '' ) {
     message.innerHTML = `Add Country`
   }else {
-    message.innerHTML = abcd;
-    getCountry();
+    getCountry(countryInput.value);
+    countryInput.value = '';
   }
 })
 
 
-const getCountry = () =>{ 
+const getCountry = (input) =>{ 
+
+  let countryName = input;
+  let url = `https://restcountries.com/v2/name/${countryName}`
 
   const request = new XMLHttpRequest();
   request.open('GET', `${url}`);
@@ -70,10 +71,6 @@ const getCountry = () =>{
     <p>
       💵
       <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
-    </p>
-    <p>
-      🤝
-      <span> Block : </span> ${data.regionalBlocs[0].name}
     </p>
     <p>
       🌍
