@@ -88,8 +88,19 @@ const getCountry = () =>{
   .then((res)=> res.json())
   .then((data)=>{
     const countriesContainer = document.querySelector(".country_section");
+    countriesContainer.innerHTML = ``;
 
-    countriesContainer.innerHTML = `<article class="country_card">
+    return data.result.forEach(element => {
+      const countriesContainer = document.querySelector(".country_section");
+      countriesContainer.innerHTML = `${element.name}`;
+    });
+  })
+}
+
+getCountry();
+
+
+{/* <article class="country_card">
   <img
     class="country_image"
     src="${data.flag}"
@@ -139,7 +150,4 @@ const getCountry = () =>{
       <span> Lat-Long : </span> (${data.latlng})
     </p>
   </div>
-</article>`;
-  })
-}
-
+</article> */}
