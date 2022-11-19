@@ -2,11 +2,13 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #02a58f;
 }
 
 .main_title {
     font-size: 2rem;
     text-align: center;
+    color: #fff;
 }
 
 .components {
@@ -21,17 +23,64 @@ body {
     width: 25vw;
 }
 
-.input {
-    height: 2rem;
+.form_section h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.country_input {
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #02a58f;
+}
+
+.country_input::-webkit-input-placeholder {
+    color: #02a58f;
 }
 
 .search_button {
     height: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    width: fit-content;
+    padding: .5rem 1rem .5rem 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: .5rem;
+    border: 2px solid #fff;
+    background-color: #02a58f;
+    color: #fff;
+    font-weight: 700;
+    border-radius: .5rem;
+    transition: .5s;
+}
+
+.search_button:hover {
+    background-color: #fff;
+    color: #02a58f;
+}
+
+.search_button:active {
+    background-color: #02a58f;
+    color: #fff;
+}
+
+.message {
+    color: red;
+}
+
+.hide {
+    display: none;
 }
 
 .country_card {
     box-shadow: 1px 1px 10px;
-    width: 30vw;
+    width: 40vw;
+    background-color: #fff  ;
 }
 
 .country_image {
