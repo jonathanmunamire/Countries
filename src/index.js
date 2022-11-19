@@ -15,9 +15,14 @@ search.addEventListener('click', ()=>{
     setTimeout(() =>{
       message.classList.add('hide');
     },2000)
-  }else {
+  }else if (countryInput.value) {
     getCountry(countryInput.value);
     countryInput.value = '';
+  }else if (capitalInput.value) {
+    getCapital(capitalInput.value);
+    capitalInput.value = '';
+  }else {
+    console.log("Hey");
   }
 })
 
