@@ -49,53 +49,104 @@ const getCountry = (input) =>{
   console.log(data);
   
   const countriesContainer = document.querySelector(".country_section");
-  countriesContainer.innerHTML = `<article class="country_card">
-  <img
-    class="country_image"
-    src="${data.flag}"
-    alt=""
-  />
-  <div class="country_data">
-    <h2 class="country_name">${data.name}</h2>
-    <h3 class="country_region">${data.region}</h3>
-    <p>
-      🕔
-      <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
-    </p>
-    <p>
-      🏢
-      <span> Capital : </span>${data.capital}
-    </p>
-    <p>
-      🗣️
-      <span> Languages : </span> ${data.languages[0].name}
-    </p>
-    <p>
-      📞
-      <span> Code : +</span>${data.callingCodes}
-    </p>
-    <p>
-      🧑🏻‍🤝‍🧑🏾
-      <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M
-    </p>
-    <p>
-      📏
-      <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
-    </p>
-    <p>
-      🚧
-      <span> Borders : </span> ${[data.borders.join(", ")]}
-    </p>
-    <p>
-      💵
-      <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
-    </p>
-    <p>
-      🌍
-      <span> Lat-Long : </span> (${data.latlng})
-    </p>
-  </div>
-  </article>`;
+  
+  if (data.borders){
+    countriesContainer.innerHTML = `<article class="country_card">
+    <img
+      class="country_image"
+      src="${data.flag}"
+      alt=""
+    />
+    <div class="country_data">
+      <h2 class="country_name">${data.name}</h2>
+      <h3 class="country_region">${data.region}</h3>
+      <p>
+        🕔
+        <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
+      </p>
+      <p>
+        🏢
+        <span> Capital : </span>${data.capital}
+      </p>
+      <p>
+        🗣️
+        <span> Languages : </span> ${data.languages[0].name}
+      </p>
+      <p>
+        📞
+        <span> Code : +</span>${data.callingCodes}
+      </p>
+      <p>
+        🧑🏻‍🤝‍🧑🏾
+        <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M - ${data.demonym}
+      </p>
+      <p>
+        📏
+        <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
+      </p>
+      <p>
+        🚧
+        <span> Borders : </span> ${[data.borders.join(", ")]}
+      </p>
+      <p>
+        💵
+        <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
+      </p>
+      <p>
+        🌍
+        <span> Lat-Long : </span> (${data.latlng})
+      </p>
+    </div>
+    </article>`;
+  }else{
+    countriesContainer.innerHTML = `<article class="country_card">
+    <img
+      class="country_image"
+      src="${data.flag}"
+      alt=""
+    />
+    <div class="country_data">
+      <h2 class="country_name">${data.name}</h2>
+      <h3 class="country_region">${data.region}</h3>
+      <p>
+        🕔
+        <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
+      </p>
+      <p>
+        🏢
+        <span> Capital : </span>${data.capital}
+      </p>
+      <p>
+        🗣️
+        <span> Languages : </span> ${data.languages[0].name}
+      </p>
+      <p>
+        📞
+        <span> Code : +</span>${data.callingCodes}
+      </p>
+      <p>
+        🧑🏻‍🤝‍🧑🏾
+        <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M - ${data.demonym}
+      </p>
+      <p>
+        📏
+        <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
+      </p>
+      <p>
+        🚧
+        <span> Borders : </span> None
+      </p>
+      <p>
+        💵
+        <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
+      </p>
+      <p>
+        🌍
+        <span> Lat-Long : </span> (${data.latlng})
+      </p>
+    </div>
+    </article>`;
+  }
 })
 }
 
@@ -113,53 +164,104 @@ const getCapital = (input) =>{
   console.log(data);
   
   const countriesContainer = document.querySelector(".country_section");
-  countriesContainer.innerHTML = `<article class="country_card">
-  <img
-    class="country_image"
-    src="${data.flag}"
-    alt=""
-  />
-  <div class="country_data">
-    <h2 class="country_name">${data.name}</h2>
-    <h3 class="country_region">${data.region}</h3>
-    <p>
-      🕔
-      <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
-    </p>
-    <p>
-      🏢
-      <span> Capital : </span>${data.capital}
-    </p>
-    <p>
-      🗣️
-      <span> Languages : </span> ${data.languages[0].name}
-    </p>
-    <p>
-      📞
-      <span> Code : +</span>${data.callingCodes}
-    </p>
-    <p>
-      🧑🏻‍🤝‍🧑🏾
-      <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M
-    </p>
-    <p>
-      📏
-      <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
-    </p>
-    <p>
-      🚧
-      <span> Borders : </span> ${[data.borders.join(", ")]}
-    </p>
-    <p>
-      💵
-      <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
-    </p>
-    <p>
-      🌍
-      <span> Lat-Long : </span> (${data.latlng})
-    </p>
-  </div>
-  </article>`;
+
+    if (data.borders){
+    countriesContainer.innerHTML = `<article class="country_card">
+    <img
+      class="country_image"
+      src="${data.flag}"
+      alt=""
+    />
+    <div class="country_data">
+      <h2 class="country_name">${data.name}</h2>
+      <h3 class="country_region">${data.region}</h3>
+      <p>
+        🕔
+        <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
+      </p>
+      <p>
+        🏢
+        <span> Capital : </span>${data.capital}
+      </p>
+      <p>
+        🗣️
+        <span> Languages : </span> ${data.languages[0].name}
+      </p>
+      <p>
+        📞
+        <span> Code : +</span>${data.callingCodes}
+      </p>
+      <p>
+        🧑🏻‍🤝‍🧑🏾
+        <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M - ${data.demonym}
+      </p>
+      <p>
+        📏
+        <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
+      </p>
+      <p>
+        🚧
+        <span> Borders : </span> ${[data.borders.join(", ")]}
+      </p>
+      <p>
+        💵
+        <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
+      </p>
+      <p>
+        🌍
+        <span> Lat-Long : </span> (${data.latlng})
+      </p>
+    </div>
+    </article>`;
+  }else{
+    countriesContainer.innerHTML = `<article class="country_card">
+    <img
+      class="country_image"
+      src="${data.flag}"
+      alt=""
+    />
+    <div class="country_data">
+      <h2 class="country_name">${data.name}</h2>
+      <h3 class="country_region">${data.region}</h3>
+      <p>
+        🕔
+        <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
+      </p>
+      <p>
+        🏢
+        <span> Capital : </span>${data.capital}
+      </p>
+      <p>
+        🗣️
+        <span> Languages : </span> ${data.languages[0].name}
+      </p>
+      <p>
+        📞
+        <span> Code : +</span>${data.callingCodes}
+      </p>
+      <p>
+        🧑🏻‍🤝‍🧑🏾
+        <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M - ${data.demonym}
+      </p>
+      <p>
+        📏
+        <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
+      </p>
+      <p>
+        🚧
+        <span> Borders : </span> None
+      </p>
+      <p>
+        💵
+        <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
+      </p>
+      <p>
+        🌍
+        <span> Lat-Long : </span> (${data.latlng})
+      </p>
+    </div>
+    </article>`;
+  }
 })
 }
 
@@ -177,53 +279,104 @@ const getAlpha = (input) =>{
   console.log(data);
   
   const countriesContainer = document.querySelector(".country_section");
-  countriesContainer.innerHTML = `<article class="country_card">
-  <img
-    class="country_image"
-    src="${data.flag}"
-    alt=""
-  />
-  <div class="country_data">
-    <h2 class="country_name">${data.name}</h2>
-    <h3 class="country_region">${data.region}</h3>
-    <p>
-      🕔
-      <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
-    </p>
-    <p>
-      🏢
-      <span> Capital : </span>${data.capital}
-    </p>
-    <p>
-      🗣️
-      <span> Languages : </span> ${data.languages[0].name}
-    </p>
-    <p>
-      📞
-      <span> Code : +</span>${data.callingCodes}
-    </p>
-    <p>
-      🧑🏻‍🤝‍🧑🏾
-      <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M
-    </p>
-    <p>
-      📏
-      <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
-    </p>
-    <p>
-      🚧
-      <span> Borders : </span> ${[data.borders.join(", ")]}
-    </p>
-    <p>
-      💵
-      <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
-    </p>
-    <p>
-      🌍
-      <span> Lat-Long : </span> (${data.latlng})
-    </p>
-  </div>
-  </article>`;
+
+    if (data.borders){
+    countriesContainer.innerHTML = `<article class="country_card">
+    <img
+      class="country_image"
+      src="${data.flag}"
+      alt=""
+    />
+    <div class="country_data">
+      <h2 class="country_name">${data.name}</h2>
+      <h3 class="country_region">${data.region}</h3>
+      <p>
+        🕔
+        <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
+      </p>
+      <p>
+        🏢
+        <span> Capital : </span>${data.capital}
+      </p>
+      <p>
+        🗣️
+        <span> Languages : </span> ${data.languages[0].name}
+      </p>
+      <p>
+        📞
+        <span> Code : +</span>${data.callingCodes}
+      </p>
+      <p>
+        🧑🏻‍🤝‍🧑🏾
+        <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M - ${data.demonym}
+      </p>
+      <p>
+        📏
+        <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
+      </p>
+      <p>
+        🚧
+        <span> Borders : </span> ${[data.borders.join(", ")]}
+      </p>
+      <p>
+        💵
+        <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
+      </p>
+      <p>
+        🌍
+        <span> Lat-Long : </span> (${data.latlng})
+      </p>
+    </div>
+    </article>`;
+  }else{
+    countriesContainer.innerHTML = `<article class="country_card">
+    <img
+      class="country_image"
+      src="${data.flag}"
+      alt=""
+    />
+    <div class="country_data">
+      <h2 class="country_name">${data.name}</h2>
+      <h3 class="country_region">${data.region}</h3>
+      <p>
+        🕔
+        <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
+      </p>
+      <p>
+        🏢
+        <span> Capital : </span>${data.capital}
+      </p>
+      <p>
+        🗣️
+        <span> Languages : </span> ${data.languages[0].name}
+      </p>
+      <p>
+        📞
+        <span> Code : +</span>${data.callingCodes}
+      </p>
+      <p>
+        🧑🏻‍🤝‍🧑🏾
+        <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M - ${data.demonym}
+      </p>
+      <p>
+        📏
+        <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
+      </p>
+      <p>
+        🚧
+        <span> Borders : </span> None
+      </p>
+      <p>
+        💵
+        <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
+      </p>
+      <p>
+        🌍
+        <span> Lat-Long : </span> (${data.latlng})
+      </p>
+    </div>
+    </article>`;
+  }
 })
 }
 
@@ -241,53 +394,104 @@ const getCode = (input) =>{
   console.log(data);
   
   const countriesContainer = document.querySelector(".country_section");
-  countriesContainer.innerHTML = `<article class="country_card">
-  <img
-    class="country_image"
-    src="${data.flag}"
-    alt=""
-  />
-  <div class="country_data">
-    <h2 class="country_name">${data.name}</h2>
-    <h3 class="country_region">${data.region}</h3>
-    <p>
-      🕔
-      <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
-    </p>
-    <p>
-      🏢
-      <span> Capital : </span>${data.capital}
-    </p>
-    <p>
-      🗣️
-      <span> Languages : </span> ${data.languages[0].name}
-    </p>
-    <p>
-      📞
-      <span> Code : +</span>${data.callingCodes}
-    </p>
-    <p>
-      🧑🏻‍🤝‍🧑🏾
-      <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M
-    </p>
-    <p>
-      📏
-      <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
-    </p>
-    <p>
-      🚧
-      <span> Borders : </span> ${[data.borders.join(", ")]}
-    </p>
-    <p>
-      💵
-      <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
-    </p>
-    <p>
-      🌍
-      <span> Lat-Long : </span> (${data.latlng})
-    </p>
-  </div>
-  </article>`;
+
+    if (data.borders){
+    countriesContainer.innerHTML = `<article class="country_card">
+    <img
+      class="country_image"
+      src="${data.flag}"
+      alt=""
+    />
+    <div class="country_data">
+      <h2 class="country_name">${data.name}</h2>
+      <h3 class="country_region">${data.region}</h3>
+      <p>
+        🕔
+        <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
+      </p>
+      <p>
+        🏢
+        <span> Capital : </span>${data.capital}
+      </p>
+      <p>
+        🗣️
+        <span> Languages : </span> ${data.languages[0].name}
+      </p>
+      <p>
+        📞
+        <span> Code : +</span>${data.callingCodes}
+      </p>
+      <p>
+        🧑🏻‍🤝‍🧑🏾
+        <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M - ${data.demonym}
+      </p>
+      <p>
+        📏
+        <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
+      </p>
+      <p>
+        🚧
+        <span> Borders : </span> ${[data.borders.join(", ")]}
+      </p>
+      <p>
+        💵
+        <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
+      </p>
+      <p>
+        🌍
+        <span> Lat-Long : </span> (${data.latlng})
+      </p>
+    </div>
+    </article>`;
+  }else{
+    countriesContainer.innerHTML = `<article class="country_card">
+    <img
+      class="country_image"
+      src="${data.flag}"
+      alt=""
+    />
+    <div class="country_data">
+      <h2 class="country_name">${data.name}</h2>
+      <h3 class="country_region">${data.region}</h3>
+      <p>
+        🕔
+        <span> Time-Zone : </span> ${[data.timezones.join(", ")]}
+      </p>
+      <p>
+        🏢
+        <span> Capital : </span>${data.capital}
+      </p>
+      <p>
+        🗣️
+        <span> Languages : </span> ${data.languages[0].name}
+      </p>
+      <p>
+        📞
+        <span> Code : +</span>${data.callingCodes}
+      </p>
+      <p>
+        🧑🏻‍🤝‍🧑🏾
+        <span> Population : </span> ${(+data.population /1000000).toFixed(1)}M - ${data.demonym}
+      </p>
+      <p>
+        📏
+        <span> Area : </span> ${data.area} <span>km<sup>2</sup></span>
+      </p>
+      <p>
+        🚧
+        <span> Borders : </span> None
+      </p>
+      <p>
+        💵
+        <span> Currencies : </span> ${data.currencies[0].name} (${data.currencies[0].symbol})
+      </p>
+      <p>
+        🌍
+        <span> Lat-Long : </span> (${data.latlng})
+      </p>
+    </div>
+    </article>`;
+  }
 })
 }
 
