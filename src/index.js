@@ -70,7 +70,7 @@ const getCountry = (input) =>{
       </p>
       <p>
         🗣️
-        <span> Languages : </span> ${data.languages[0].name}
+        <span> Languages : </span> ${(data.languages.map((obj) => obj.name)).join(', ')}
       </p>
       <p>
         📞
@@ -118,7 +118,7 @@ const getCountry = (input) =>{
       </p>
       <p>
         🗣️
-        <span> Languages : </span> ${data.languages[0].name}
+        <span> Languages : </span> ${(data.languages.map((obj) => obj.name)).join(', ')}
       </p>
       <p>
         📞
@@ -185,7 +185,7 @@ const getCapital = (input) =>{
       </p>
       <p>
         🗣️
-        <span> Languages : </span> ${data.languages[0].name}
+        <span> Languages : </span> ${(data.languages.map((obj) => obj.name)).join(', ')}
       </p>
       <p>
         📞
@@ -233,7 +233,7 @@ const getCapital = (input) =>{
       </p>
       <p>
         🗣️
-        <span> Languages : </span> ${data.languages[0].name}
+        <span> Languages : </span> ${(data.languages.map((obj) => obj.name)).join(', ')}
       </p>
       <p>
         📞
@@ -300,7 +300,7 @@ const getAlpha = (input) =>{
       </p>
       <p>
         🗣️
-        <span> Languages : </span> ${data.languages[0].name}
+        <span> Languages : </span> ${(data.languages.map((obj) => obj.name)).join(', ')}
       </p>
       <p>
         📞
@@ -348,7 +348,7 @@ const getAlpha = (input) =>{
       </p>
       <p>
         🗣️
-        <span> Languages : </span> ${data.languages[0].name}
+        <span> Languages : </span> ${(data.languages.map((obj) => obj.name)).join(', ')}
       </p>
       <p>
         📞
@@ -415,7 +415,7 @@ const getCode = (input) =>{
       </p>
       <p>
         🗣️
-        <span> Languages : </span> ${data.languages[0].name}
+        <span> Languages : </span> ${(data.languages.map((obj) => obj.name)).join(', ')}
       </p>
       <p>
         📞
@@ -463,7 +463,7 @@ const getCode = (input) =>{
       </p>
       <p>
         🗣️
-        <span> Languages : </span> ${data.languages[0].name}
+        <span> Languages : </span> ${(data.languages.map((obj) => obj.name)).join(', ')}
       </p>
       <p>
         📞
