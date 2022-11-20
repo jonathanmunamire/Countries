@@ -102,11 +102,18 @@ body {
 .country_region {
     margin: 0;
     margin-bottom: 5%;
+    color: rgb(107, 107, 107);
 }
 
 .country_data p {
     margin: 0;
     margin-bottom: 2%;
+}
+
+.country_data p span{
+    margin: 0;
+    margin-bottom: 2%;    
+    color: rgb(70, 70, 70);
 }
 
 @media (max-width: 900px) {
