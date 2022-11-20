@@ -494,8 +494,3 @@ const getCode = (input) =>{
   }
 })
 }
-
-
-
-
-  
