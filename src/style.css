@@ -108,3 +108,77 @@ body {
     margin: 0;
     margin-bottom: 2%;
 }
+
+@media (max-width: 900px) {
+    .form_section {
+        width: 32.5vw;
+    }
+
+    .country_card {
+        width: 42.5vw;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .components {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5vh;
+    }   
+    
+    .form_section {
+        width: 50vw;
+        margin-left: 25vw;
+        margin-right: 25vw;
+    }
+
+    .country_card {
+        width: 70vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .components {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5vh;
+    }   
+    
+    .form_section {
+        width: 55vw;
+        margin-left: 25vw;
+        margin-right: 27.5vw;
+    }
+
+    .country_card {
+        width: 70vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    } 
+}
+
+@media (max-width: 550px) {
+    .components {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5vh;
+    }   
+    
+    .form_section {
+        width: 70vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    .country_card {
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    } 
+}
