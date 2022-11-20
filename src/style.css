@@ -81,10 +81,13 @@ body {
     box-shadow: 1px 1px 10px;
     width: 40vw;
     background-color: #fff  ;
+    border-radius: 2rem;
 }
 
 .country_image {
     width: 100%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
 }
 
 .country_data {
