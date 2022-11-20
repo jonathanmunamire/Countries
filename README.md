@@ -1,8 +1,6 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Countries
 
-# WebPack
-
-> Project to Display List of Books
+> Project to generate data from API and display Countries Information
 
 ## Built With
 
@@ -23,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 
     Clone this repository
-    git clone https://github.com/jonathanmunamire/Webpack.git
+    git clone https://github.com/jonathanmunamire/Countries.git
 
 ### Install
 
@@ -31,7 +29,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Deployment
 
-[Live Demo Link]()
+[Live Demo Link](https://jonathanmunamire.github.io/Countries/dist/)
 
 ## Create your Own Webpack Template
 
