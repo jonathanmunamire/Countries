@@ -3,6 +3,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #02a58f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.main_container {
+    min-height: 85vh;
 }
 
 .main_title {
@@ -82,6 +91,7 @@ body {
     width: 40vw;
     background-color: #fff  ;
     border-radius: 2rem;
+    margin-bottom: 5vh;
 }
 
 .country_image {
@@ -119,9 +129,38 @@ body {
     color: rgb(70, 70, 70);
 }
 
+.footer_container{
+    height: 15vh;
+    background-color: black;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.footer_container p span {
+    color: #02a58f;
+}
+
+.footer_icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.fa-brands {
+    color: #fff;
+}
+
+.fa-brands:hover {
+    color: #02a58f;
+}
+
 @media (max-width: 900px) {
     .form_section {
         width: 32.5vw;
+        margin-bottom: 0;
     }
 
     .country_card {
@@ -142,6 +181,7 @@ body {
         width: 50vw;
         margin-left: 25vw;
         margin-right: 25vw;
+        margin-bottom: 0;
     }
 
     .country_card {
@@ -163,6 +203,7 @@ body {
         width: 55vw;
         margin-left: 25vw;
         margin-right: 27.5vw;
+        margin-bottom: 0;
     }
 
     .country_card {
@@ -184,6 +225,7 @@ body {
         width: 70vw;
         margin-left: 15vw;
         margin-right: 15vw;
+        margin-bottom: 0;
     }
 
     .country_card {
